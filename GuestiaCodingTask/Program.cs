@@ -23,7 +23,7 @@ namespace GuestiaCodingTask
                 Console.WriteLine("Unregistered " + group.Key.Name + " Guests");
                 Console.WriteLine("========================================");
 
-                IEnumerable<string> formattedGuestNames = group.Select(s => GetFormmattedName(s));
+                IEnumerable<string> formattedGuestNames = group.Select(s => GetFormattedName(s));
 
                 foreach (string name in formattedGuestNames.OrderBy(o => o))
                     Console.WriteLine(name);
@@ -34,7 +34,7 @@ namespace GuestiaCodingTask
             Console.ReadLine();
         }
 
-        static string GetFormmattedName(Guest guest)
+        static string GetFormattedName(Guest guest)
         {
             switch (guest.GuestGroup.NameDisplayFormat)
             {
